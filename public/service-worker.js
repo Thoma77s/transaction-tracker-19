@@ -1,16 +1,19 @@
+const APP_PREFIX = 'BudgetTracker-';
+const VERSION = 'version_01';
+const CACHE_NAME = APP_PREFIX + VERSION
+
 const FILES_TO_CACHE = [
   "/",
-  "manifest.json",
-  "public/index.html",
-  "public/css/styles.css",
-  "public/js/index.js",
-  "public/js/idb.js",
-  "public/icons/icon-192x192.png",
-  "public/icons/icon-512x512.png",
+  "/manifest.json",
+  "/index.html",
+  "/css/styles.css",
+  "/js/index.js",
+  "/js/idb.js",
+  "/icons/icon-192x192.png",
+  "/icons/icon-512x512.png",
 ];
 
-const CACHE_NAME = "static-cache-v2";
-const DATA_CACHE_NAME = "data-cache-v1";
+
 
 // Respond with cached resources
 self.addEventListener('fetch', function (e) {
@@ -62,3 +65,4 @@ self.addEventListener('activate', function (e) {
     })
   );
 });
+
